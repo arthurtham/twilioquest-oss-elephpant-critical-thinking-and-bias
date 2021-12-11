@@ -80,7 +80,7 @@ module.exports = function(event, world) {
   console.log(event);
 
   //DEBUG: Disable cache
-  window.reloadExternalModules = true;
+  //window.reloadExternalModules = true;
 
   let worldState = world.getState("com.twilioquest.CriticalThinking") || DEFAULT_MISSION_STATE;
 

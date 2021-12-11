@@ -315,11 +315,11 @@ module.exports = function(event, world) {
   console.log(event);
 
   //DEBUG: Disable cache
-  window.reloadExternalModules = true;
+  //window.reloadExternalModules = true;
 
   let worldState = world.getState("com.twilioquest.Bias") || DEFAULT_MISSION_STATE;
 
-  if (event.name === 'levelDidLoad') {
+  /*if (event.name === 'levelDidLoad') {
     console.log("levelDidLoad: resetting default state for debugging");
     worldState = DEFAULT_MISSION_STATE;
     //DEBUG: Reset all objectives
@@ -330,7 +330,7 @@ module.exports = function(event, world) {
         world.removeObjective("bias", objective);
       }
     })
-  }
+  }*/
 
   //const worldState = DEFAULT_MISSION_STATE;
   console.log("World State");
