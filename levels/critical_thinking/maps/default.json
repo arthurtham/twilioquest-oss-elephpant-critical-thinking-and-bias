@@ -151,12 +151,12 @@
                         {
                          "name":"hackable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"hidden",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }, 
                         {
                          "name":"objectiveName",
