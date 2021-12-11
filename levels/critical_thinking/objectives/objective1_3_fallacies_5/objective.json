@@ -1,0 +1,22 @@
+{
+  "title": "Logical Fallacies 5: The Conjunction Fallacy",
+  "description": "Examine factors that impact good critical thinking!",
+  "validation_fields": [
+    {
+      "name": "notes",
+      "type": "prompt",
+      "placeholder": "Answer all ",
+      "label": "True or False: The more specific details added to an outlandish story, the more believable it seems."
+    },
+    {
+      "name": "answer1",
+      "type": "boolean",
+      "placeholder": "a, b, c, d, e",
+      "label": ""
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": ["army_helmet"]
+  }
+}

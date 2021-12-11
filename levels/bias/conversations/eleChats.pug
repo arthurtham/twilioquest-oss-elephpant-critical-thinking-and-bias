@@ -1,0 +1,52 @@
+- var worldState = getState('com.twilioquest.Bias');
+- var ele = worldState.Bias.conversations.ele;
+- var step = ele[ele.current]['current']
+
+// Converstions
+conversation(display_name="ELE-AI")
+  if ele.current === "objective2_1_definebias_pre"
+      - ele[ele.current]['complete'] = true;
+      statement.
+        As a colonist in need of basic training, an important part of this 
+        learning involves how the colonists will interact with other humans. 
+        In order to ensure the success you will need to overcome the misinformation
+        and bad habits long encouraged by the powers behind the Evil Legacy Systems
+        that dominate the Cloud. One way society in the Cloud has suffered from 
+        misinformation is through the way the Evil Legacy System reinforces
+        stereotypes and inherent human biases. In order to stay in power, 
+        they were known to pit people against each other and exploit their
+        differences. In order to unlearn these bad habits, and combat many
+        years of misinformation, you will use your critical thinking skills
+        to embark on a learning journey to identify your bias as well as
+        strategies to interrupt that bias. 
+      responses
+  else if ele.current === "objective2_2_unconsciousbiaspractice_pre"
+      - ele[ele.current]['complete'] = true;
+      statement.
+        Welcome to the Cryo room where future colonists are sleeping and waiting 
+        to be activated when the time comes. You’ll need to cross the Cryo Bridge 
+        to advance, but before you can do that, it looks like you’ll have to make 
+        your way around the Cryo Room and complete a few challenges.       
+      responses
+  else if ele.current === "objective2_5_deepmaze_post"
+      - ele[ele.current]['complete'] = true;
+      statement.
+        It’s time to begin to assemble a crew. But how will you know who will 
+        be best for the roles? How can you be sure you’re being objective and 
+        just in your decisions on team development and leadership? Your choices, 
+        and team development, needs to be diverse and inclusive (and the data 
+        shows this also improves outcomes for teams!). The learning you have 
+        done so far around bias can help when you make decisions on who will 
+        fill the needed positions: <b>Xenobiologist</b>, <b>Data Scientist</b>, 
+        <b>Astrophysicist</b>, 
+        <b>Biochemist</b>, and <b>Medical Doctor</b>.
+        <br>
+        Stop over and see Cedric for more directions!
+
+      responses
+  else
+    statement.
+      You've reached this conversation in error.
+// Flush world state changes, if any
+- worldState.Bias.conversations.ele = ele;
+- setState('com.twilioquest.Bias', worldState);

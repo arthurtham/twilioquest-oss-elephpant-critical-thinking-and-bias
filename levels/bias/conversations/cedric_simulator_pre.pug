@@ -1,0 +1,41 @@
+- var worldState = getState('com.twilioquest.Bias');
+- var missionComplete = worldState.Bias.missionComplete;
+
+conversation(display_name="Cedric")
+  case lastResponse
+    when "what_are_you_doing_here"
+      statement#what_are_you_doing_here
+    when "teleport_out"
+      if missionComplete.complete
+        - missionComplete.teleport = true;
+        statement#teleport_out
+      else 
+        statement#teleport_out_cant
+    default
+      statement#default
+      responses
+        response#what_are_you_doing_here.
+          What do the side terminals do?
+        response#teleport_out.
+          Teleport me back to the dock!
+
+  statements
+    statement#default
+      text.
+        Hey! Fancy seeing you here. May I help you out with the <b>bias simulator</b>?
+    statement#what_are_you_doing_here
+      text.
+        Each terminal explores potential candidates to choose from for 
+        the most immediate roles you need filled to get started on your new planet. 
+        Ele has developed a simulator for you to test outcomes 
+        and success as a colony based on your team selections. 
+        Just interact with the side terminals to set your team up!
+    statement#teleport_out 
+      text.
+        Alright! Let's bring you back to the dock! 
+    statement#teleport_out_cant
+      text.
+        Teleport out? I can't do that. Let's focus on the bias simulator first!
+
+- worldState.Bias.missionComplete = missionComplete;
+- setState('com.twilioquest.Bias', worldState);

@@ -1,0 +1,21 @@
+{
+  "title": "Teammate Select: Xenobiologist",
+  "description": "Select a candidate for your team that you will bring into the bias simulator.",
+  "validation_fields": [
+    {
+      "name": "notes",
+      "type": "prompt",
+      "placeholder": "Put notes here",
+      "label": "Select a candidate, then press __HACK__ to confirm your selection."
+    },
+    {
+      "name": "answer1",
+      "type": "text",
+      "placeholder": "(a,b,c,d,e,f)",
+      "label": "Select member:"
+    }
+  ],
+  "rewards": {
+    "xp": 0
+  }
+}
